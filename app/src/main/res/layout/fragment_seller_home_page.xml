@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.SellerHomePageFragment">
+
+    ////////upper bar/////
+    <RelativeLayout
+        android:id="@+id/upper_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/theme_lower_curve"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/baloo_bhaina"
+            android:text="Your Products"
+            android:textColor="@color/lightwhite"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    //products
+
+    <RelativeLayout
+        android:id="@+id/slrhomepageproudctsRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/upper_bar">
+
+        //search view
+
+        <EditText
+            android:id="@+id/searchProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/rect"
+            android:drawableStart="@drawable/ic_search_24"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:layout_toStartOf="@+id/filterProductBtn"
+            android:hint="Search"/>
+        //filter
+        <ImageButton
+            android:id="@+id/filterProductBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_filter_24"/>
+        
+        <TextView
+            android:layout_toStartOf="@+id/filterProductTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/filteredPrdoductTv"
+            android:layout_below="@+id/searchProduct"
+            android:text="Showing All"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        ///recycler view show products
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/filteredPrdoductTv"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/rwo_product_seller" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

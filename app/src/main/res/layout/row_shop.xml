@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:orientation="vertical"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="15dp"
+    app:contentPadding="5dp"
+    app:cardBackgroundColor="@color/cardviewcolor">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/nextIv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/shopname_shopui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/baloo_bhaina"
+                android:maxLines="1"
+                android:text="Shopaname"
+                android:textColor="@color/theme"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/phonenmbr_shopui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo_bhaina"
+
+                android:text="Phone Number"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/selleraddress_shopui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo_bhaina"
+                android:text="address"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/nextIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_expand" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

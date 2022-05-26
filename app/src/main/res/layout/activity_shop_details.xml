@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ShopDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/shopdetails_upperbar"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@color/theme"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/shopname_shopdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:fontFamily="@font/baloo_bhaina"
+                android:text="Shop name"
+                android:textColor="@color/lightwhite"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/phonenumber_shopdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shopname_shopdetails"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/baloo_bhaina"
+                android:text="phone"
+                android:textColor="@color/lightwhite"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/email_shopdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phonenumber_shopdetails"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/baloo_bhaina"
+                android:text="email"
+                android:textColor="@color/lightwhite"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/address_shopdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email_shopdetails"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/baloo_bhaina"
+                android:text="address"
+                android:textColor="@color/lightwhite"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <ImageButton
+            android:id="@+id/cartbtnsd"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:src="@drawable/ic_cart_24"
+            android:layout_alignParentEnd="true"/>
+
+        <ImageButton
+            android:id="@+id/backbtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="shop Details"
+            android:fontFamily="@font/baloo_bhaina"
+            android:textColor="@color/lightwhite"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+    
+    ////products
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/productsRL"
+        android:layout_below="@+id/shopdetails_upperbar">
+
+        //search
+        <EditText
+            android:id="@+id/searchproductsd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toStartOf="@+id/filterbtnsd"
+            android:background="@drawable/rect"
+            android:drawableStart="@drawable/ic_search_24"
+            android:drawablePadding="10dp"
+            android:hint="search"
+            android:padding="10dp"/>
+        <ImageButton
+            android:id="@+id/filterbtnsd"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:src="@drawable/ic_filter_24"
+            android:scaleType="fitXY"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filteredproducttvsd"
+                android:layout_below="@+id/searchproductsd"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Showing all"
+                android:textColor="@color/black"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productssdRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/filterbtnsd"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/rwo_product_user" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:background="@color/theme"
+    android:orientation="vertical"
+    app:cardCornerRadius="20dp">
+
+    <RelativeLayout
+        android:id="@+id/titlerl"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <TextView
+            android:id="@+id/itemtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/baloo_bhaina"
+            android:text="Title"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/itemquantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal"
+               android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/quantity_selector"
+                android:layout_centerVertical="true">
+
+                <ImageButton
+                    android:id="@+id/decrementalitembtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:src="@drawable/ic_remove_black" />
+
+                <TextView
+                    android:id="@+id/quantity_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/incrementalitembtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:src="@drawable/ic_add_black" />
+            </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/itemquantity"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp">
+            <TextView
+                android:id="@+id/removeitem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove"
+                android:textColor="#ff0000"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/itemfinalprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="313dp"
+            android:layout_marginBottom="25dp"
+            android:layout_toEndOf="@+id/title_pr_cart"
+            android:text="$10"
+            android:textColor="@color/price"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

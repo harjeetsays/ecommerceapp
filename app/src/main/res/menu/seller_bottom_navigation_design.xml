@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app= "http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/seller_homepage"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"/>
+    <item
+        android:id="@+id/seller_add_products"
+        android:icon="@drawable/ic_baseline_add_24"
+        android:title="Add"/>
+    <item
+        android:id="@+id/seller_orders"
+        android:icon="@drawable/ic_orders_24"
+        android:title="Orders"/>
+    <item
+        android:id="@+id/seller_profile"
+        android:icon="@drawable/ic_user_24"
+        android:title="Profile"/>
+
+</menu>

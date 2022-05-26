@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ecommerce App</string>
+    <string name="title_activity_sellet_maps">SelletMapsActivity</string>
+    <string name="title_activity_seller_maps">SellerMapsActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

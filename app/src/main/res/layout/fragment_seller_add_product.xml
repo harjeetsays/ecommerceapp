@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.SellerAddProductFragment">
+
+    ////////upper bar/////
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/theme_lower_curve"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/baloo_bhaina"
+            android:text="Add Product"
+            android:textColor="@color/lightwhite"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    ////////add product////////
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/addproductIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_baseline_add_24"
+            app:riv_border_color="@color/theme"
+            app:riv_border_width="1dp" />
+
+
+        ////////title//////
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/titleET"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addproductIcon"
+            android:hint="Title"
+            android:paddingLeft="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_text"
+                android:inputType="textPersonName|textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        //////description//////
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/descriptionET"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleET"
+            android:hint="Description"
+            android:paddingLeft="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_text"
+                android:inputType="textCapSentences|textMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        /////////category///////
+
+        <TextView
+            android:id="@+id/categoryTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descriptionET"
+            android:layout_margin="5dp"
+            android:drawableStart="@drawable/ic_category_gray"
+            android:drawableEnd="@drawable/ic_down_gray"
+            android:hint="Category"
+            android:padding="10dp"
+            android:textSize="18sp" />
+        ////////quantity////////
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/quantityET"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/categoryTV"
+            android:hint="Quantity"
+            android:paddingLeft="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_cart_24"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        /////price/////
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/priceET"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/quantityET"
+            android:hint="price"
+            android:paddingLeft="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_cart_24"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        /////add product button////
+
+        <Button
+            android:id="@+id/addproduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/priceET"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button"
+            android:minWidth="150dp"
+            android:text="Add Product" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
